@@ -1,0 +1,49 @@
+{{ if .Site.Data.sections.resume.enable }}
+{{ $section := index (where $.Site.Sections "Type" "resume") 0 }}
+{{ with $section }}
+<section class="section resume" id="resume">
+    <div class="resume__background"></div>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-6">
+                <div class="resume__heading">
+                    <span class="top-title pre-line">{{ .Params.topTitle }}</span>
+                    <h2>{{ .Title }}</h2>
+                    {{ .Content }}
+
+                    <div class="btn-group nav mt-5">
+                        {{ range $index, $nestedSection := (first 2 $section.Sections) }}
+                        <a href="#{{ $nestedSection.Slug }}" class="btn btn-primary {{ if (eq $index 0) }}active{{ end }}" data-toggle="tab">{{ $nestedSection.Title }}</a>
+                        {{ end }}
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-6">
+                <div class="tab-content">
+                    {{ range $index, $nestedSection := (first 2 $section.Sections) }}
+                    <div class="resume__education tab-pane {{ if (eq $index 0) }}active{{ end }}" id="{{ $nestedSection.Slug }}">
+                        {{ range $nestedSection.RegularPages }}
+                        <div class="resume__education_item">
+                            <span class="pre-line text-primary">
+                                {{ if and (isset .Params "startdate") (not (isset .Params "enddate")) }}
+                                    {{ i18n "resume.since" }} {{ time.Format "2006" .Params.startdate }}
+                                {{ else if and (isset .Params "startdate") (isset .Params "enddate") }}
+                                    {{ time.Format "2006" .Params.startdate }}
+                                    - {{ time.Format "2006" .Params.enddate }}
+                                {{ else }}
+                                    {{ time.Format "2006" .Date }}
+                                {{ end }}
+                            </span>
+                            <h4>{{ .Title }}</h4>
+                            {{ .Content }}
+                        </div>
+                        {{ end }}
+                    </div>
+                    {{ end }}
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+{{ end }}
+{{ end }}

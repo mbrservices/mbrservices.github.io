@@ -1,0 +1,18 @@
+# Language configuration
+#   Configure language-specific parameters in their respective localized configuration files (e.g params.de.yaml or menus.de.yaml)
+
+de:
+  contentDir: content/de
+  disabled: false
+  languageCode: 'de-DE'
+  languageDirection: 'ltr'
+  languageName: 'Deutsch'
+  weight: 1
+
+en:
+  contentDir: content/en
+  disabled: false
+  languageCode: 'en-US'
+  languageDirection: 'ltr'
+  languageName: 'English'
+  weight: 2

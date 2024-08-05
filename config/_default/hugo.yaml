@@ -1,0 +1,21 @@
+# Hugo configuration
+
+title: "mbr it services"
+baseURL: "https://mbr.services"
+theme: "portio"
+
+defaultContentLanguage: de
+defaultContentLanguageInSubdir: true
+
+# # https://gohugo.io/getting-started/configuration/#configure-dates
+frontmatter:
+  date:
+    - startDate
+    - :default
+
+paginate: 6
+
+disableKinds:
+  - taxonomy
+  - term
+  - sitemap

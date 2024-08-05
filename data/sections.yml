@@ -1,0 +1,18 @@
+# Section configuration
+
+about:
+  enable: true
+blog:
+  enable: false
+hero:
+  enable: true
+portfolio:
+  enable: false
+resume:
+  enable: true
+service:
+  enable: true
+skill:
+  enable: true
+testimonial:
+  enable: false

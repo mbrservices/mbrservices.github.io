@@ -1,0 +1,4 @@
+---
+title: Datenschutzerklärung
+categories: legal
+---

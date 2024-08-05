@@ -1,0 +1,45 @@
+# Translation
+#   German
+
+# Navigation
+navigation:
+  main:
+    contactButtonTitle: Projekt anfragen
+  footer:
+    legal:
+      title: Rechtliches
+    contact:
+      title: Kontakt
+
+# Footer
+footer:
+  contactCTA:
+    title: Kontakt
+    content: Lass uns ein Projekt starten
+    buttonTitle: Projekt anfragen
+
+# Contact
+contact:
+  phone: Telefon
+  email: E-Mail
+  meeting: Online-Meeting
+  meetingCTA: Termin vereinbaren
+
+  form:
+    title: Kontaktformular
+    intro: Sende mir deine Anfrage ganz unkompliziert über nachfolgendes Kontaktformular.
+    subject: Neue Nachricht via mbr.services
+    name: Name
+    namePlaceholder: Maria Musterfrau
+    email: E-Mail
+    emailPlaceholder: maria@beispiel.de
+    phone: Telefon
+    phonePlaceholder: +49 160 12345678
+    message: Deine Nachricht
+    messagePlaceholder: Hallo Marcel, ...
+    privacyNotice: Über dieses Formular übermittelte Daten werden ausschließlich gemäß der vorliegenden <a href="/{{ .Lang }}/privacy">Datenschutzerklärung</a> verwendet.
+    send: Nachricht senden
+
+# Resume
+resume:
+  since: seit

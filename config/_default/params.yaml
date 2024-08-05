@@ -1,0 +1,31 @@
+# Site parameters
+
+blogPageURL: "blog"
+contactLink: "contact"
+logo: "images/mbrservices-logo.svg"
+logoText: "mbr it services"
+
+web3formsAccessKey: e7f14229-7d65-429b-ba51-066830af086c
+
+contact:
+  name: "Marcel Brückner"
+  company: "mbr it services"
+  address: "Neustadter Str. 157, 96515 Sonneberg"
+  email: "servus"
+  phone: "+49 162 7040019"
+  country: Deutschland
+
+# Social icons
+social:
+  - icon: "fa-github"
+    url: "https://github.com/mbrservices"
+    weight: 1
+  - icon: "fa-linkedin-square"
+    url: "https://www.linkedin.com/in/marcelbrueckner"
+    weight: 2
+  - icon: "fa-xing"
+    url: "https://xing.com/profile/Marcel_Brueckner8"
+    weight: 3
+  - icon: "fa-globe"
+    url: "https://www.freelancermap.de/profil/devops-engineer-softwareentwickler-iot-und-smart-home-enthusiast"
+    weight: 4

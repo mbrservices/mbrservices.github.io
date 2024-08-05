@@ -1,0 +1,16 @@
+# Generated files by hugo
+public/
+resources/_gen/
+assets/jsconfig.json
+hugo_stats.json
+
+# Temporary lock file while building
+/.hugo_build.lock
+
+# Files downloaded during CI / website generation
+static/images/feathericons/
+
+.DS_Store
+public/
+.vscode/
+.local/

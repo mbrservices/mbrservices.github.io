@@ -1,0 +1,45 @@
+# Translation
+#   English
+
+# Navigation
+navigation:
+  main:
+    contactButtonTitle: Hire me
+  footer:
+    legal:
+      title: Legal
+    contact:
+      title: Contact
+
+# Footer
+footer:
+  contactCTA:
+    title: Contact me
+    content: Let’s Start a Project
+    buttonTitle: Get in touch
+
+# Contact
+contact:
+  phone: Phone
+  email: Email
+  meeting: Meet me online
+  meetingCTA: Schedule a meeting
+
+  form:
+    title: Contact Form
+    intro: Feel free to send me your message using the contact form below.
+    subject: New message via mbr.services
+    name: Name
+    namePlaceholder: Jane Doe
+    email: Email
+    emailPlaceholder: jane@example.com
+    phone: Phone
+    phonePlaceholder: +49 160 12345678
+    message: Your message
+    messagePlaceholder: Hey Marcel, ...
+    privacyNotice: Data submitted via this form will only be used in accordance with my <a href="/{{ .Lang }}/privacy">privacy policy</a>.
+    send: Send message
+
+# Resume
+resume:
+  since: since

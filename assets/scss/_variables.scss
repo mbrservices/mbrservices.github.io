@@ -1,0 +1,49 @@
+// Variables
+
+//
+// Colors
+//
+
+// https://colorffy.com/dark-theme-generator          
+/** SCSS DARK THEME PRIMARY COLORS */
+$primary-100:  #a1c349;
+$primary-200:  #acca5f;
+$primary-300:  #b7d073;
+$primary-400:  #c2d787;
+$primary-500:  #cdde9b;
+$primary-600:  #d7e4af;
+ 
+/** SCSS DARK THEME SURFACE COLORS */
+$surface-100:  #1c1c1c;
+$surface-200:  #313131;
+$surface-300:  #474747;
+$surface-400:  #5f5f5f;
+$surface-500:  #777777;
+$surface-600:  #919191;
+ 
+ 
+/** SCSS DARK THEME MIXED SURFACE COLORS */
+$surface-mixed-100:  #282a21;
+$surface-mixed-200:  #3c3e36;
+$surface-mixed-300:  #52534c;
+$surface-mixed-400:  #686a63;
+$surface-mixed-500:  #80817b;
+$surface-mixed-600:  #989994;
+
+/**
+ * Variable overrides
+ *
+ * For all overridable variables, see
+ *   /themes/portio/assets/bootstrap-4.5.2/scss/_variables.scss
+ *   /themes/portio/assets/scss/_variables.scss
+**/
+
+// General
+$primary: $primary-100;
+$secondary: $primary-400; // was #CAD593;
+
+$body-bg: $surface-100 !default;
+
+// Text
+$headings-color: $secondary;
+$body-color: #fff !default;

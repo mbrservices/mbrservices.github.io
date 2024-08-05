@@ -1,0 +1,31 @@
+# Main Menu
+main:
+- name: "Home"
+  url: "#home"
+  weight: 1
+
+- name: "Über mich"
+  url: "#about"
+  weight: 2
+
+- name: "Leistungen"
+  url: "#service"
+  weight: 3
+
+- name: "Lebenslauf"
+  url: "#resume"
+  weight: 5
+
+- name: "Kenntnisse"
+  url: "#skills"
+  weight: 6
+
+# Footer menu
+footer:
+  - name: Impressum
+    url: imprint
+    weight: 1
+
+  - name: Datenschutzerklärung
+    url: privacy
+    weight: 2

@@ -1,0 +1,213 @@
+/* Portio theme style overrides */
+
+@use 'sass:color';
+@import "variables";
+
+
+/* Navigation */
+@media (max-width: 991px) {
+    .navbar {
+        .navbar-brand {
+            color: $surface-100;
+        }
+
+        .main-navigation .nav-item .nav-link {
+            color: $surface-100;
+        }
+    }
+}
+
+@media (min-width: 992px) {
+    .navbar {
+        &:not(.nav__color__change) {
+            .navbar-brand {
+                color: #fff;
+            }
+
+            .main-navigation .nav-item .nav-link {
+                color: #fff !important;
+            }
+        }
+
+        &.nav__color__change {
+            // background: $surface-100;
+
+            .navbar-brand {
+                color: $surface-100;
+            }
+        }
+
+        a.hire_button {
+            width: 185px;
+        }
+    }
+}
+
+/* General */
+.hero .hero_background-svg svg path,
+.service .service__background svg path {
+    fill: lighten($surface-100, 1%);
+}
+
+.hero .hero_blob svg stop,
+.service .service__background_shape svg stop,
+.about .about_content-inner-blob svg stop,
+.case-details .animate-shape svg stop,
+.skill .skill__background_shape svg stop,
+.animate-shape svg stop {
+   stop-color: $primary-100;
+}
+
+.top-title {
+    color: unset
+}
+
+.btn-primary:hover {
+	color: $surface-100;
+}
+
+.btn-primary:hover,
+.btn-zoom:hover {
+    box-shadow: 0 8px 20px rgba($surface-600,.3);
+}
+
+/* Sections */
+
+/* themes/portio/assets/scss/components/_about-section.scss */
+.about {
+    &_content {
+        &-inner {
+            background: $surface-200;
+
+            .btn-outline-primary {
+                display: none;
+            }
+        }
+    }
+}
+
+/* themes/portio/assets/scss/components/service-section.scss */
+.service {
+    &__slider {
+        &_item {
+            background: $surface-200;
+            box-shadow: 0 20px 40px rgba($surface-600,.12);
+
+            &-icon svg path{
+                fill: $surface-300;
+            }
+        }
+    }
+
+    .service__background_shape {
+        height: 500px;
+    }
+}
+
+/* themes/portio/assets/scss/components/_case_details.scss */
+.case-details-info-item {
+    max-width: 30%;
+}
+
+.portfolio {
+    &-item {
+        &-content {
+            span {
+                color: #fff;
+            }
+            h3 a.text-dark {
+               color: $secondary !important;
+            }
+        }
+    }
+}
+
+.resume {
+    &__background {
+        background: lighten($surface-100, 1%);
+    }
+
+    &__heading {
+        span::before {
+            background: $secondary;
+        }
+
+        h2#my-expertises {
+            color: $secondary;
+        }
+    }
+
+    &__education_item {
+        background: $surface-200;
+    }
+}
+
+.skill {
+    &__progress {
+        &_item {
+            span {
+                color: #fff !important;
+            }
+        }
+    }
+}
+
+.footer {
+    background: lighten($surface-100, 1%);
+
+    &__background_shape svg path {
+        fill: $surface-100;
+    }
+
+    &__cta_content {
+        span::before {
+            background: $surface-200;
+        }
+        span, h2 {
+            color: $surface-200;
+        }   
+    }
+
+    &__cta_action {
+        a.btn {
+            background: $surface-200;
+            border: $surface-200;
+        }
+    }
+}
+
+.contact {
+    &__info_item {
+        background: $surface-200;
+        box-shadow: 0 20px 40px rgba($surface-600,.12);
+
+        &-icon svg path{
+            fill: $surface-300;
+        }
+
+        a {
+            text-decoration: unset;
+            &:hover {
+                color: $primary;
+                text-decoration: underline;
+            }
+        }
+    }
+}
+
+.form-group.required .control-label:after { 
+    content:"*";
+    color:red;
+}
+
+/* Hide floating patterns */
+.hero .hero_figure .figure-svg,
+.hero .hero_footer-svg,
+.about-svg,
+.service .service__background_pattern,
+.skill .skill__background_pattern,
+.skill .skill__thumb_pattern,
+.svg-img,
+.animate-pattern {
+    display: none;
+}

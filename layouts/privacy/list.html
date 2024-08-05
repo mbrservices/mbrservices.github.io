@@ -1,0 +1,495 @@
+{{ define "main" }}
+
+<header class="breadCrumb">
+  <div class="animate-shape">
+    <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 600 600">
+      <defs>
+        <linearGradient id="d" x1="0.929" y1="0.111" x2="0.263" y2="0.935" gradientUnits="objectBoundingBox">
+          <stop offset="0" stop-color="#f1f6f9" />
+          <stop offset="1" stop-color="#f1f6f9" stop-opacity="0" />
+        </linearGradient>
+      </defs>
+      <g data-name="blob-shape (3)">
+        <path class="blob" fill="url(#d)"
+          d="M455.4 151.1c43.1 36.7 73.4 92.8 60.8 136.3-12.7 43.5-68.1 74.4-111.3 119.4-43.1 45-74 104.1-109.8 109-35.9 5-76.7-44.2-111.8-89.2-35.2-45-64.7-85.8-70.8-132.6-6-46.8 11.6-99.6 46.7-136.3 35.2-36.6 88-57.2 142.4-58.8 54.5-1.7 110.6 15.6 153.8 52.2z" />
+      </g>
+    </svg>
+  </div>
+  <div class="container">
+    <div class="row">
+      <div class="col-12 text-center">
+        <h5 class="breadCrumb__title">{{ .Title }}</h5>
+      </div>
+    </div>
+  </div>
+</header>
+
+<section class="section privacy">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-10 offset-lg-1 text-justify">
+        {{ $contact := .Site.Params.contact }}
+        <h3 class="text-center">Datenschutz auf einen Blick</h4>
+        <h5>Allgemeine Hinweise</h5>
+        <p>
+          Die folgenden Hinweise geben einen einfachen Überblick darüber,
+          was mit deinen personenbezogenen Daten passiert, wenn du diese Website besuchst.
+          Personenbezogene Daten sind alle Daten, mit denen du persönlich identifiziert werden kannst.
+          Ausführliche Informationen zum Thema Datenschutz findest du in folgender unter diesem Text aufgeführten
+          Datenschutz&shy;erklärung.
+        </p>
+
+        <h5>Datenerfassung auf dieser Website</h5>
+        <h6>Wer ist verantwortlich für die Datenerfassung auf dieser Website?</h6>
+        <p>
+          Die Datenverarbeitung auf dieser Website erfolgt durch den Websitebetreiber: 
+        </p>
+        <p>
+          {{ $contact.name }}<br />
+          {{ $contact.company }}<br />
+          {{ index (split $contact.address ",") 0 }}<br />
+          {{ index (split $contact.address ",") 1 }}<br />
+          {{ $contact.country }}
+        </p>
+        <p>
+          <a class="text-light" href="tel:{{ $contact.phone }}">
+            {{ $contact.phone }}
+          </a><br />
+          <a class="text-light append" href="mailto:{{ $contact.email }}">
+            {{ $contact.email }}
+          </a>
+        </p>
+        
+        <h6>Wie erfasse ich deine Daten?</h6>
+        <p>
+          Deine Daten werden zum einen dadurch erhoben, dass du mir diese mitteilst. Hierbei kann es sich z.B. um Daten handeln,
+          die du in ein Kontaktformular eingibst.
+        </p>
+        <p>
+          Andere Daten werden automatisch beim Besuch der Website durch beteiligte IT-Systeme erfasst.
+          Das sind vor allem technische Daten (z.B. Internetbrowser, Betriebssystem oder Uhrzeit des Seitenaufrufs).
+          Die Erfassung dieser Daten erfolgt automatisch, sobald du diese Website aufrufst.
+        </p>
+        
+        <h6>Wofür nutze ich deine Daten?</h6>
+        <p>
+          Ein Teil der Daten wird erhoben, um eine fehlerfreie Bereitstellung der Website zu gewährleisten.
+          Eine Analyse deines Nutzerverhaltens findet nicht statt.
+        </p>
+        
+        <h6>Welche Rechte hast du bezüglich deiner Daten?</h6>
+        <p>
+          Du hast jederzeit das Recht, unentgeltlich Auskunft über Herkunft, Empfänger und Zweck deiner
+          gespeicherten personenbezogenen Daten zu erhalten. Du hast außerdem ein Recht, die Berichtigung oder
+          Löschung dieser Daten zu verlangen. Wenn du eine Einwilligung zur Datenverarbeitung erteilt hast,
+          kannst du diese Einwilligung jederzeit für die Zukunft widerrufen. Außerdem hast du das Recht,
+          unter bestimmten Umständen die Einschränkung der Verarbeitung deiner personenbezogenen Daten zu
+          verlangen. Des Weiteren steht dir ein Beschwerderecht bei der zuständigen Aufsichtsbehörde
+          zu.
+        </p>
+        <p>
+          Hierzu sowie zu weiteren Fragen zum Thema Datenschutz kannst du dich jederzeit an mich wenden.
+        </p>
+
+        <!-- Interesting part -->
+        <h3 class="text-center mt-5 pt-5 mb-3">Datenschutz im Detail</h3>
+        <h4>Allgemeine Hinweise</h4>
+        <h5>Datenschutz</h5>
+        <p>
+          Ich behandle deine personenbezogenen Daten vertraulich und entsprechend den gesetzlichen
+          Datenschutzvorschriften sowie dieser Datenschutzerklärung.
+        </p>
+        <p>
+          Wenn du diese Website benutzt, werden verschiedene personenbezogene Daten erhoben.
+          Personenbezogene Daten sind Daten, mit denen du persönlich identifiziert werden kannst.
+          Die vorliegende Datenschutzerklärung erläutert, welche Daten ich erhebe und wofür ich sie nutze.
+          Sie erläutert auch, wie und zu welchem Zweck das geschieht.
+        </p>
+        <p>
+          Ich weise darauf hin, dass die Datenübertragung im Internet (z.B. bei der Kommunikation per E-Mail) Sicherheitslücken aufweisen kann.
+          Ein lückenloser Schutz der Daten vor dem Zugriff durch Dritte ist nicht möglich.
+        </p>
+
+        <h5>Hinweis zur verantwortlichen Stelle</h5>
+        <p>
+          Die verantwortliche Stelle für die Datenverarbeitung auf dieser Website ist:
+        </p>
+        <p>
+          {{ $contact.name }}<br />
+          {{ $contact.company }}<br />
+          {{ index (split $contact.address ",") 0 }}<br />
+          {{ index (split $contact.address ",") 1 }}<br />
+          {{ $contact.country }}
+        </p>
+        <p>
+          <a class="text-light" href="tel:{{ $contact.phone }}">
+            {{ $contact.phone }}
+          </a><br />
+          <a class="text-light append" href="mailto:{{ $contact.email }}">
+            {{ $contact.email }}
+          </a>
+        </p>
+        <p>
+          Verantwortliche Stelle ist die natürliche oder juristische Person, die allein oder gemeinsam mit anderen
+          über die Zwecke und Mittel der Verarbeitung von personenbezogenen Daten (z.B. Namen, E-Mail-
+          Adressen o. Ä.) entscheidet.
+        </p>
+        
+        <h4>Datenerfassung auf dieser Website</h4>
+        <h5>Hosting</h5>
+        <p>
+          Diese Website wird extern gehostet. Die personenbezogenen Daten, die auf dieser Website erfasst werden,
+          werden auf den Servern des Hosters gespeichert. Serverstandort ist USA.
+          Hierbei handelt es sich v.a. um folgende Daten:
+        </p>
+        <ul>
+          <li>IP-Adresse</li>
+          <li>die Adresse der vorher besuchten Website ("Referer"-Anfrage-Header)</li>
+          <li>Datum und Uhrzeit der Anfrage</li>
+          <li>Inhalt der Anforderung</li>
+          <li>übertragene Datenmenge</li>
+          <li>Informationen zu Browser und Betriebssystem</li>
+          <li>sonstige Daten, die über eine Website generiert werden</li>
+        </ul>
+        <p>
+          Das externe Hosting erfolgt zum Zwecke der Vertragserfüllung gegenüber potenziellen und
+          bestehenden Kunden (Art. 6 Abs. 1 lit. b DSGVO) und im Interesse einer sicheren, schnellen und effizienten
+          Bereitstellung dieser Website (Art. 6 Abs. 1 lit. f DSGVO).
+        </p>
+        <p>
+          Der Hoster wird deine Daten nur insoweit verarbeiten, wie dies zur Erfüllung seiner Leistungspflichten erforderlich ist.
+          Es erfolgt kein Tracking und ich habe auf diese Daten keinen direkten Zugriff.
+        </p>
+        <p>
+          Ich setze für die Zurverfügungstellung meiner Website folgenden Hoster ein:
+        </p>
+        <p>
+          GitHub Inc.<br />
+          88 Colin P Kelly Jr St<br />
+          San Francisco, CA 94107<br />
+          United States<br/>
+          <a class="text-light" href="https://github.com">https://github.com</a>
+        </p>
+        <p>
+          GitHub hat Compliance-Maßnahmen für internationale Datenübermittlungen umgesetzt.
+          Diese gelten für alle weltweiten Aktivitäten, bei denen GitHub personenbezogene Daten von natürlichen Personen in der EU verarbeitet.
+          Diese Maßnahmen basieren auf den EU-Standardvertragsklauseln (SCCs).
+          Weitere Informationen hierzu sowie zu Widerspruchs- und Beseitigungsmöglichkeiten gegenüber GitHub findest du unter: <br/>
+          <a class="text-light" href="https://github.com/customer-terms/github-data-protection-agreement">
+            https://github.com/customer-terms/github-data-protection-agreement
+          </a><br/>
+          <a class="text-light" href="https://docs.github.com/de/site-policy/privacy-policies/github-general-privacy-statement">
+            https://docs.github.com/de/site-policy/privacy-policies/github-general-privacy-statement
+          </a>
+        </p>
+        <h6>Hinweis zur Datenweitergabe in die USA</h6>
+        <p>
+          Ich weise darauf hin, dass die USA kein sicherer Drittstaat im Sinne des EU-Datenschutzrechts sind.
+          US-Unternehmen sind dazu verpflichtet, personenbezogene Daten an Sicherheitsbehörden herauszugeben,
+          ohne dass du als betroffene Person hiergegen gerichtlich vorgehen könntest.
+          Es kann daher nicht ausgeschlossen werden, dass US-Behörden (z.B. Geheimdienste) deine auf US-Servern befindlichen Daten
+          zu Überwachungszwecken verarbeiten, auswerten und dauerhaft speichern.
+          Ich habe auf diese Verarbeitungstätigkeiten keinen Einfluss.
+        </p>
+
+        <h5>Kontaktformular</h5>
+        <p>
+          Wenn du mir per Kontaktformular Anfragen zukommen lässt, werden deine
+          Angaben aus dem Anfrageformular inklusive der von dir dort angegebenen Kontaktdaten zwecks Bearbeitung
+          der Anfrage und für den Fall von Anschlussfragen bei mir gespeichert. Diese Daten gebe ich nicht ohne deine
+          Einwilligung weiter.
+        </p>
+        <p>
+          Um dir die Funktionalität des Formulars auf dieser statischen Seite zur Verfügung stellen zu können verwende ich einen externen Anbieter.
+          Bei der Benutzung des Kontaktformulars werden die von dir übermittelten Daten von diesem Anbieter verarbeitet und per E-Mail an mich weitergeleitet.
+        </p>
+          Ich setze für die Zurverfügungstellung meines Formulars folgenden Anbieter ein:
+        </p>
+        <p>
+          Web3Forms<br />
+          <a class="text-light" href="https://web3forms.com">https://web3forms.com</a>
+        </p>
+        <p>
+          Darüber hinaus erhebt Web3Forms unter anderem weitere Daten, um die gewünschte Funktionalität des Formulars bereitzustellen. Diese Daten umfassen u.a.:
+        </p>
+        <ul>
+          <li>deine IP-Adresse</li>
+          <li>dein Browsertyp</li>
+          <li>die Domain der Website</li>
+          <li>das Datum und die Uhrzeit des Zugriffs</li>
+        </ul>
+        <p>
+          Diese Daten werden nicht mit Informationen verknüpft, mit denen du persönlich identifiziert werden kannst.
+          Weitere Informationen findest du in den Datenschutzbestimmungen von Web3Forms:<br/>
+          <a class="text-light" href="https://web3forms.com/privacy">https://web3forms.com/privacy</a>.
+        </p>
+        <p>
+          Die Verarbeitung dieser Daten erfolgt auf Grundlage von Art. 6 Abs. 1 lit. b DSGVO,
+          sofern deine Anfrage mit der Erfüllung eines Vertrags zusammenhängt oder zur Durchführung
+          vorvertraglicher Maßnahmen erforderlich ist. In allen übrigen Fällen beruht die Verarbeitung auf
+          meinem berechtigten Interesse an der effektiven Bearbeitung der an mich gerichteten Anfragen (Art. 6 Abs. 1 lit. f
+          DSGVO) oder auf deiner Einwilligung (Art. 6 Abs. 1 lit. a DSGVO) sofern diese abgefragt wurde; die Einwilligung ist
+          jederzeit widerrufbar.
+        </p>
+        <p>
+          Die von dir im Kontaktformular eingegebenen Daten verbleiben bei mir, bis du
+          mich zur Löschung aufforderst, deine Einwilligung zur Speicherung widerrufst oder der Zweck für die
+          Datenspeicherung entfällt (z.B. nach abgeschlossener Bearbeitung deiner Anfrage). Zwingende
+          gesetzliche Bestimmungen &ndash; insbesondere Aufbewahrungsfristen &ndash; bleiben unberührt.
+        </p>
+        <p>
+          Wenn du mich ohne Verwendung dieses Drittanbieters kontaktieren willst, kannst du mir eine E-Mail schreiben.
+        </p>
+        <h6>Hinweis zur Datenweitergabe in die USA</h6>
+        <p>
+          Ich weise darauf hin, dass die USA kein sicherer Drittstaat im Sinne des EU-Datenschutzrechts sind.
+          US-Unternehmen sind dazu verpflichtet, personenbezogene Daten an Sicherheitsbehörden herauszugeben,
+          ohne dass du als betroffene Person hiergegen gerichtlich vorgehen könntest.
+          Es kann daher nicht ausgeschlossen werden, dass US-Behörden (z.B. Geheimdienste) deine auf US-Servern befindlichen Daten
+          zu Überwachungszwecken verarbeiten, auswerten und dauerhaft speichern.
+          Ich habe auf diese Verarbeitungstätigkeiten keinen Einfluss.
+        </p>
+        
+        <h5>Anfrage per E-Mail oder Telefon</h5>
+        <p>
+          Wenn du mich per E-Mail oder Telefon kontaktierst, wird deine Anfrage inklusive aller daraus hervorgehenden personenbezogenen Daten (Name, Anfrage)
+          zum Zwecke der Bearbeitung deines Anliegens bei mir gespeichert und verarbeitet. Diese Daten gebe ich nicht ohne
+          deine Einwilligung weiter.
+        </p>
+        <p>
+          Die Verarbeitung dieser Daten erfolgt auf Grundlage von Art. 6 Abs. 1 lit. b DSGVO,
+          sofern deine Anfrage mit der Erfüllung eines Vertrags zusammenhängt oder zur Durchführung
+          vorvertraglicher Maßnahmen erforderlich ist. In allen übrigen Fällen beruht die Verarbeitung auf
+          meinem berechtigten Interesse an der effektiven Bearbeitung der an mich gerichteten Anfragen (Art. 6 Abs. 1 lit. f
+          DSGVO) oder auf deiner Einwilligung (Art. 6 Abs. 1 lit. a DSGVO) sofern diese abgefragt wurde; die Einwilligung ist
+          jederzeit widerrufbar.
+        </p>
+        <p>
+          Die von dir an mich per Kontaktanfragen übersandten Daten verbleiben bei mir, bis du mich zur Löschung aufforderst,
+          deine Einwilligung zur Speicherung widerrufst oder der Zweck für die Datenspeicherung entfällt (z.B. nach
+          abgeschlossener Bearbeitung deines Anliegens). Zwingende gesetzliche Bestimmungen &ndash; insbesondere
+          gesetzliche Aufbewahrungsfristen &ndash; bleiben unberührt.
+        </p>
+
+        <h5>Online-Terminvereinbarung</h5>
+        <p>
+          Wenn du mir eine Terminanfrage zukommen lässt, werden deine Angaben aus dem Anfrageformular
+          inklusive der von dir dort angegebenen Kontaktdaten (z.B. E-Mail-Adresse) zwecks Durchführung des Termins
+          und für den Fall von Anschlussfragen bei mir gespeichert. Diese Daten gebe ich nicht ohne deine Einwilligung weiter.
+        </p>
+        <p>
+          Um dir die Funktionalität der Terminvereinbarung zur Verfügung stellen zu können verwende ich einen externen Anbieter.
+          Bei Klick auf den Link "Termin vereinbaren" öffnet sich eine Seite des externen Anbieters in einem neuen Fenster.
+          Bei der Benutzung der Seite zur Terminvereinbarung werden die von dir übermittelten Daten von diesem Anbieter verarbeitet und per E-Mail an mich weitergeleitet.
+        </p>
+          Ich setze für die Zurverfügungstellung der Online-Terminvereinbarung folgenden Anbieter ein:
+        </p>
+        <p>
+          Cal.com, Inc.,<br />
+          2261 Market Street #4382<br />
+          San Francisco, CA<br />
+          United States<br />
+          <a class="text-light" href="https://cal.com">https://cal.com</a>
+        </p>
+        <p>
+          Darüber hinaus erhebt Cal.com unter anderem weitere Daten, um die gewünschte Funktionalität des Formulars bereitzustellen. Diese Daten umfassen u.a.:
+        </p>
+        <ul>
+          <li>deine IP-Adresse</li>
+          <li>dein Browsertyp</li>
+          <li>die Domain der Website</li>
+          <li>das Datum und die Uhrzeit des Zugriffs</li>
+        </ul>
+        <p>
+          Weitere Informationen findest du in den Datenschutzbestimmungen von Cal.com:<br/>
+          <a class="text-light" href="https://cal.com/privacy">https://cal.com/privacy</a>.
+        </p>
+        <p>
+          Die Verarbeitung dieser Daten erfolgt auf Grundlage von Art. 6 Abs. 1 lit. b DSGVO,
+          sofern deine Anfrage mit der Erfüllung eines Vertrags zusammenhängt oder zur Durchführung
+          vorvertraglicher Maßnahmen erforderlich ist. In allen übrigen Fällen beruht die Verarbeitung auf
+          meinem berechtigten Interesse an der effektiven Bearbeitung der an mich gerichteten Anfragen (Art. 6 Abs. 1 lit. f
+          DSGVO) oder auf deiner Einwilligung (Art. 6 Abs. 1 lit. a DSGVO) sofern diese abgefragt wurde; die Einwilligung ist
+          jederzeit widerrufbar.
+        </p>
+        <p>
+          Die von dir im Anfrageformular eingegebenen Daten verbleiben bei mir, bis du
+          mich zur Löschung aufforderst, deine Einwilligung zur Speicherung widerrufst oder der Zweck für die
+          Datenspeicherung entfällt (z.B. nach Durchführung des Termins). Zwingende
+          gesetzliche Bestimmungen &ndash; insbesondere Aufbewahrungsfristen &ndash; bleiben unberührt.
+        </p>
+        <h6>Hinweis zur Datenweitergabe in die USA</h6>
+        <p>
+          Ich weise darauf hin, dass die USA kein sicherer Drittstaat im Sinne des EU-Datenschutzrechts sind.
+          US-Unternehmen sind dazu verpflichtet, personenbezogene Daten an Sicherheitsbehörden herauszugeben,
+          ohne dass du als betroffene Person hiergegen gerichtlich vorgehen könntest.
+          Es kann daher nicht ausgeschlossen werden, dass US-Behörden (z.B. Geheimdienste) deine auf US-Servern befindlichen Daten
+          zu Überwachungszwecken verarbeiten, auswerten und dauerhaft speichern.
+          Ich habe auf diese Verarbeitungstätigkeiten keinen Einfluss.
+        </p>
+        
+        <!-- Everything else -->
+        <h4>Sonstiges</h4>
+        <h5>Speicherdauer</h5>
+        <p>
+          Soweit innerhalb dieser Datenschutzerklärung keine speziellere Speicherdauer
+          genannt wurde, verbleiben deine personenbezogenen Daten bei mir, bis der Zweck für die Datenverarbeitung
+          entfällt. Wenn du ein berechtigtes Löschersuchen geltend machst oder eine Einwilligung zur
+          Datenverarbeitung widerrufst, werden deine Daten gelöscht, sofern ich keine anderen rechtlich
+          zulässigen Gründe für die Speicherung deiner personenbezogenen Daten habe (z.B. steuer-
+          oder handelsrechtliche Aufbewahrungsfristen); im letztgenannten Fall erfolgt die Löschung nach Fortfall
+          dieser Gründe.
+        </p>
+
+        <h5>Allgemeine Hinweise zu den Rechtsgrundlagen der Datenverarbeitung auf dieser Website</h5>
+        <p>
+          Sofern du in die Datenverarbeitung eingewilligt hast, verarbeite ich deine personenbezogenen Daten auf Grundlage von Art.
+          6 Abs. 1 lit. a DSGVO bzw. Art. 9 Abs. 2 lit. a DSGVO, sofern besondere Datenkategorien nach Art. 9 Abs. 1 DSGVO
+          verarbeitet werden. Im Falle einer ausdrücklichen Einwilligung in die Übertragung personenbezogener
+          Daten in Drittstaaten erfolgt die Datenverarbeitung außerdem auf Grundlage von Art. 49 Abs. 1 lit. a DSGVO.
+          Sofern du in die Speicherung von Cookies oder in den Zugriff auf Informationen in deinem Endgerät (z.B. via
+          Device-Fingerprinting) eingewilligt hast, erfolgt die Datenverarbeitung zusätzlich auf Grundlage von &sect;
+          25 Abs. 1 TDDDG. Die Einwilligung ist jederzeit widerrufbar. Sind deine Daten zur Vertragserfüllung oder zur
+          Durchführung vorvertraglicher Maßnahmen erforderlich, verarbeite ich deine Daten auf Grundlage des
+          Art. 6 Abs. 1 lit. b DSGVO. Des Weiteren verarbeite ich deine Daten, sofern diese zur Erfüllung einer
+          rechtlichen Verpflichtung erforderlich sind auf Grundlage von Art. 6 Abs. 1 lit. c DSGVO. Die Datenverarbeitung
+          kann ferner auf Grundlage meines berechtigten Interesses nach Art. 6 Abs. 1 lit. f DSGVO erfolgen. Über die
+          jeweils im Einzelfall einschlägigen Rechtsgrundlagen wird in den folgenden Absätzen dieser
+          Datenschutzerklärung informiert.
+        </p>
+        
+        <h5>Empfänger von personenbezogenen Daten</h5>
+        <p>
+          Im Rahmen meiner Geschäftstätigkeit arbeite ich mit verschiedenen externen Stellen zusammen.
+          Dabei ist teilweise auch eine Übermittlung von personenbezogenen Daten an diese externen Stellen erforderlich.
+          Ich gebe personenbezogene Daten nur dann an externe Stellen weiter, wenn dies im Rahmen einer Vertragserfüllung erforderlich ist,
+          wenn ich gesetzlich hierzu verpflichtet bin (z.B. Weitergabe von Daten an Steuerbehörden), wenn ich ein berechtigtes
+          Interesse nach Art. 6 Abs. 1 lit. f DSGVO an der Weitergabe habe oder wenn eine sonstige Rechtsgrundlage die
+          Datenweitergabe erlaubt. Beim Einsatz von Auftragsverarbeitern gebe ich personenbezogene Daten meiner
+          Kunden nur auf Grundlage eines gültigen Vertrags über Auftragsverarbeitung weiter. Im Falle einer
+          gemeinsamen Verarbeitung wird ein Vertrag über gemeinsame Verarbeitung geschlossen.
+        </p>
+        
+        <h5>Widerruf deiner Einwilligung zur Datenverarbeitung</h5>
+        <p>
+          Viele Datenverarbeitungsvorgänge sind nur mit deiner ausdrücklichen Einwilligung möglich.
+          Du kannst eine bereits erteilte Einwilligung jederzeit widerrufen.
+          Die Rechtmäßigkeit der bis zum Widerruf erfolgten Datenverarbeitung bleibt vom Widerruf unberührt.
+        </p>
+        
+        <h5>Widerspruchsrecht gegen die Datenerhebung in besonderen Fällen sowie gegen Direktwerbung (Art. 21
+        DSGVO)</h5>
+        <p>
+          WENN DIE DATENVERARBEITUNG AUF GRUNDLAGE VON ART. 6 ABS. 1 LIT. E ODER F
+          DSGVO ERFOLGT, HAST DU JEDERZEIT DAS RECHT, AUS GRÜNDEN, DIE SICH AUS DEINER
+          BESONDEREN SITUATION ERGEBEN, GEGEN DIE VERARBEITUNG DEINER PERSONENBEZOGENEN DATEN
+          WIDERSPRUCH EINZULEGEN; DIES GILT AUCH FÜR EIN AUF DIESE BESTIMMUNGEN GESTÜTZTES
+          PROFILING. DIE JEWEILIGE RECHTSGRUNDLAGE, AUF DENEN EINE VERARBEITUNG BERUHT, ENTNIMMST
+          DU DIESER DATENSCHUTZERKLÄRUNG. WENN DU WIDERSPRUCH EINLEGST, WERDE ICH DEINE
+          BETROFFENEN PERSONENBEZOGENEN DATEN NICHT MEHR VERARBEITEN, ES SEI DENN, ICH
+          KANN ZWINGENDE SCHUTZWÜRDIGE GRÜNDE FÜR DIE VERARBEITUNG
+          NACHWEISEN, DIE DEINE INTERESSEN, RECHTE UND FREIHEITEN ÜBERWIEGEN ODER DIE
+          VERARBEITUNG DIENT DER GELTENDMACHUNG, AUSÜBUNG ODER VERTEIDIGUNG VON
+          RECHTSANSPRÜCHEN (WIDERSPRUCH NACH ART. 21 ABS. 1 DSGVO).
+        </p>
+        <p>
+          WERDEN DEINE PERSONENBEZOGENEN DATEN VERARBEITET, UM DIREKTWERBUNG ZU BETREIBEN, SO HAST DU DAS
+          RECHT, JEDERZEIT WIDERSPRUCH GEGEN DIE VERARBEITUNG DICH BETREFFENDER PERSONENBEZOGENER
+          DATEN ZUM ZWECKE DERARTIGER WERBUNG EINZULEGEN; DIES GILT AUCH FÜR DAS PROFILING,
+          SOWEIT ES MIT SOLCHER DIREKTWERBUNG IN VERBINDUNG STEHT. WENN DU WIDERSPRICHST,
+          WERDEN DEINE PERSONENBEZOGENEN DATEN ANSCHLIESSEND NICHT MEHR ZUM ZWECKE DER
+          DIREKTWERBUNG VERWENDET (WIDERSPRUCH NACH ART. 21 ABS. 2 DSGVO).
+        </p>
+        
+        <h5>Beschwerde&shy;recht bei der zuständigen Aufsichts&shy;behörde</h5>
+        <p>
+          Im Falle von Verstößen gegen die DSGVO steht den Betroffenen ein Beschwerderecht bei einer
+          Aufsichtsbehörde, insbesondere in dem Mitgliedstaat ihres gewöhnlichen Aufenthalts, ihres
+          Arbeitsplatzes oder des Orts des mutmaßlichen Verstoßes zu. Das Beschwerderecht besteht
+          unbeschadet anderweitiger verwaltungsrechtlicher oder gerichtlicher Rechtsbehelfe.
+        </p>
+        
+        <h5>Recht auf Daten&shy;übertrag&shy;barkeit</h5>
+        <p>
+          Du hast das Recht, Daten, die ich auf Grundlage deiner Einwilligung oder in Erfüllung eines Vertrags automatisiert verarbeite,
+          an sich oder an einen Dritten in einem gängigen, maschinenlesbaren Format aushändigen zu lassen. Sofern du die direkte
+          Übertragung der Daten an einen anderen Verantwortlichen verlangst, erfolgt dies nur, soweit es technisch
+          machbar ist.
+        </p>
+        
+        <h5>Auskunft, Berichtigung und Löschung</h5>
+        <p>
+          Du hast im Rahmen der geltenden gesetzlichen
+          Bestimmungen jederzeit das Recht auf unentgeltliche Auskunft über deine gespeicherten personenbezogenen
+          Daten, deren Herkunft und Empfänger und den Zweck der Datenverarbeitung und ggf. ein Recht auf
+          Berichtigung oder Löschung dieser Daten. Hierzu sowie zu weiteren Fragen zum Thema personenbezogene
+          Daten kannst du dich jederzeit an mich wenden.
+        </p>
+        
+        <h5>Recht auf Einschränkung der Verarbeitung</h5>
+        <p>
+          Du hast das Recht, die Einschränkung der
+          Verarbeitung deiner personenbezogenen Daten zu verlangen. Hierzu kannst du dich jederzeit an mich wenden.
+          Das Recht auf Einschränkung der Verarbeitung besteht in folgenden Fällen:
+        </p>
+
+        <ul>
+          <li>
+            Wenn du die Richtigkeit deiner bei mir gespeicherten personenbezogenen Daten bestreitest,
+            benötigen ich in der Regel Zeit, um dies zu überprüfen. Für die Dauer der Prüfung hast du das Recht, die
+            Einschränkung der Verarbeitung deiner personenbezogenen Daten zu verlangen.
+          </li>
+          <li>
+            Wenn die Verarbeitung deiner personenbezogenen Daten unrechtmäßig geschah/geschieht,
+            kannst du statt der Löschung die Einschränkung der Datenverarbeitung verlangen.
+          </li>
+          <li>
+            Wenn ich deine personenbezogenen Daten nicht mehr benötige, du sie jedoch zur Ausübung, Verteidigung oder
+            Geltendmachung von Rechtsansprüchen benötigst, hast du das Recht, statt der Löschung die
+            Einschränkung der Verarbeitung deiner personenbezogenen Daten zu verlangen.
+          </li>
+          <li>
+            Wenn du einen Widerspruch nach Art. 21 Abs. 1 DSGVO eingelegt hast, muss eine Abwägung zwischen deinen und meinen
+            Interessen vorgenommen werden. Solange noch nicht feststeht, wessen Interessen überwiegen, hast du das
+            Recht, die Einschränkung der Verarbeitung deiner personenbezogenen Daten zu verlangen.
+          </li>
+        </ul>
+
+        <p>
+          Wenn du die Verarbeitung deiner personenbezogenen Daten eingeschränkt hast, dürfen diese
+          Daten &ndash; von ihrer Speicherung abgesehen &ndash; nur mit deiner Einwilligung oder zur Geltendmachung,
+          Ausübung oder Verteidigung von Rechtsansprüchen oder zum Schutz der Rechte einer anderen
+          natürlichen oder juristischen Person oder aus Gründen eines wichtigen öffentlichen Interesses der
+          Europäischen Union oder eines Mitgliedstaats verarbeitet werden.
+        </p>
+        
+        <h5>SSL- bzw. TLS-Verschlüsselung</h5>
+        <p>
+          Diese Seite nutzt aus Sicherheitsgründen und zum Schutz
+          der Übertragung vertraulicher Inhalte, wie zum Beispiel Bestellungen oder Anfragen, die du an mich als
+          Seitenbetreiber sendest, eine SSL- bzw. TLS-Verschlüsselung. Eine verschlüsselte Verbindung erkennst
+          du daran, dass die Adresszeile des Browsers von &bdquo;http://&ldquo; auf &bdquo;https://&ldquo; wechselt und
+          an dem Schloss-Symbol in deiner Browserzeile.
+        </p>
+        <p>
+          Wenn die SSL- bzw. TLS-Verschlüsselung aktiviert ist,
+          können die Daten, die du an mich übermittelst, nicht von Dritten mitgelesen werden.
+        </p>
+
+        <h5>Aktualität und Änderung dieser Datenschutzerklärung</h5>
+        <p>
+          Diese Datenschutzerklärung ist aktuell gültig und hat den Stand Juli 2024.
+        </p>
+        <p>
+          Durch die Weiterentwicklung meiner Website und Angebote darüber oder aufgrund geänderter gesetzlicher beziehungsweise behördlicher Vorgaben kann es notwendig werden,
+          diese Datenschutzerklärung zu ändern. Die jeweils aktuelle Datenschutzerklärung kann jederzeit auf dieser Website (<a class="text-light" href="{{ .Permalink }}">{{ .Permalink }}</a>) abgerufen werden.
+        </p>
+        <p class="small">
+          Auf Basis folgender Quellen: <a href="https://www.e-recht24.de">https://www.e-recht24.de</a>, <a href="https://www.opr.vc">https://www.opr.vc</a>
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+{{ end }}

@@ -1,0 +1,413 @@
+{{ define "main" }}
+
+<header class="breadCrumb">
+  <div class="animate-shape">
+    <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 600 600">
+      <defs>
+        <linearGradient id="d" x1="0.929" y1="0.111" x2="0.263" y2="0.935" gradientUnits="objectBoundingBox">
+          <stop offset="0" stop-color="#f1f6f9" />
+          <stop offset="1" stop-color="#f1f6f9" stop-opacity="0" />
+        </linearGradient>
+      </defs>
+      <g data-name="blob-shape (3)">
+        <path class="blob" fill="url(#d)"
+          d="M455.4 151.1c43.1 36.7 73.4 92.8 60.8 136.3-12.7 43.5-68.1 74.4-111.3 119.4-43.1 45-74 104.1-109.8 109-35.9 5-76.7-44.2-111.8-89.2-35.2-45-64.7-85.8-70.8-132.6-6-46.8 11.6-99.6 46.7-136.3 35.2-36.6 88-57.2 142.4-58.8 54.5-1.7 110.6 15.6 153.8 52.2z" />
+      </g>
+    </svg>
+  </div>
+  <div class="container">
+    <div class="row">
+      <div class="col-12 text-center">
+        <h5 class="breadCrumb__title">{{ .Title }}</h5>
+      </div>
+    </div>
+  </div>
+</header>
+
+<section class="section privacy">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-10 offset-lg-1 text-justify">
+        {{ $contact := .Site.Params.contact }}
+        <p class="mb-5 pb-5">
+          <em>
+            The English translation is provided as a courtesy to users.<br/>
+            In case of any ambiguity or discrepancy, the German text prevails.
+          </em>
+        </p>
+        <h3 class="text-center">Data protection at a glance</h4>
+        <h5>General information</h5>
+        <p>
+          The following information will provide you with an easy to navigate overview
+          of what will happen with your personal data when you visit this website.
+          The term "personal data" comprises all data that can be used to personally identify you.
+          For detailed information about the subject matter of data protection,
+          please consult my Data Protection Declaration, which I have included beneath this copy.
+        </p>
+
+        <h5>Data recording on this website</h5>
+        <h6>Who is the responsible party for the recording of data on this website (i.e., the “controller”)?</h6>
+        <p>
+          The data on this website is processed by the operator of the website: 
+        </p>
+        <p>
+          {{ $contact.name }}<br />
+          {{ $contact.company }}<br />
+          {{ index (split $contact.address ",") 0 }}<br />
+          {{ index (split $contact.address ",") 1 }}<br />
+          {{ $contact.country }}
+        </p>
+        <p>
+          <a class="text-light" href="tel:{{ $contact.phone }}">
+            {{ $contact.phone }}
+          </a><br />
+          <a class="text-light append" href="mailto:{{ $contact.email }}">
+            {{ $contact.email }}
+          </a>
+        </p>
+        
+        <h6>How do I record your data?</h6>
+        <p>
+          I collect your data as a result of your sharing of your data with me.
+          This may, for instance be information you enter into our contact form.
+        </p>
+        <p>
+          Other data shall be recorded automatically by IT systems involved or after you consent to its recording during your website visit.
+          This data comprises primarily technical information (e.g., web browser, operating system, or time the site was accessed).
+          This information is recorded automatically when you access this website.
+        </p>
+        
+        <h6>What is the purposes I use your data for?</h6>
+        <p>
+          A portion of the information is generated to guarantee the error free provision of the website.
+          An analysis of your user patterns does not take place.
+        </p>
+        
+        <h6>What rights do you have as far as your information is concerned?</h6>
+        <p>
+          You have the right to receive information about the source, recipients, and purposes of your archived personal data at any time without having to pay a fee for such disclosures.
+          You also have the right to demand that your data are rectified or eradicated.
+          If you have consented to data processing, you have the option to revoke this consent at any time, which shall affect all future data processing.
+          Moreover, you have the right to demand that the processing of your data be restricted under certain circumstances. Furthermore, you have the right to log a complaint with the competent supervising agency.
+        </p>
+        <p>
+          Please do not hesitate to contact me at any time if you have questions about this or any other data protection related issues.
+        </p>
+
+        <!-- Interesting part -->
+        <h3 class="text-center mt-5 pt-5 mb-3">Data protection in detail</h3>
+        <h4>General information</h4>
+        <h5>Data protection</h5>
+        <p>
+          I handle your personal data as confidential information and in compliance with the statutory data protection regulations and this Data Protection Declaration.
+        </p>
+        <p>
+          Whenever you use this website, a variety of personal information will be collected.
+          Personal data comprises data that can be used to personally identify you.
+          This Data Protection Declaration explains which data I collect as well as the purposes I use this data for.
+          It also explains how, and for which purpose the information is collected.
+        </p>
+        <p>
+          I herewith advise you that the transmission of data via the Internet (i.e., through email communications) may be prone to security gaps.
+          It is not possible to completely protect data against third-party access.
+        </p>
+
+        <h5>Information about the responsible party (referred to as the “controller” in the GDPR)</h5>
+        <p>
+          The data processing controller on this website is:
+        </p>
+        <p>
+          {{ $contact.name }}<br />
+          {{ $contact.company }}<br />
+          {{ index (split $contact.address ",") 0 }}<br />
+          {{ index (split $contact.address ",") 1 }}<br />
+          {{ $contact.country }}
+        </p>
+        <p>
+          <a class="text-light" href="tel:{{ $contact.phone }}">
+            {{ $contact.phone }}
+          </a><br />
+          <a class="text-light append" href="mailto:{{ $contact.email }}">
+            {{ $contact.email }}
+          </a>
+        </p>
+        <p>
+          The controller is the natural person or legal entity that single-handedly or jointly with others
+          makes decisions as to the purposes of and resources for the processing of personal data (e.g., names, email addresses, etc.).
+        </p>
+        
+        <h4>Recording of data on this website</h4>
+        <h5>Hosting</h5>
+        <p>
+          This website is hosted externally. The personal data collected on this website is stored on the hoster's servers.
+          Server location is USA. This may be:
+        </p>
+        <ul>
+          <li>IP addresses</li>
+          <li>the address of the previously visited website ("Referer" request header)</li>
+          <li>date and time of the request</li>
+          <li>content of the request</li>
+          <li>amount of data transferred</li>
+          <li>information about the browser and operating system</li>
+          <li>other data generated via a website</li>
+        </ul>
+        <p>
+          The external hosting serves the purpose of fulfilling the contract with our potential
+          and existing customers (Art. 6(1)(b) GDPR) and in the interest of secure, fast,
+          and efficient provision of my online services (Art. 6(1)(f) GDPR).
+        </p>
+        <p>
+          My host will only process your data to the extent necessary to fulfil its performance.
+          There is no tracking and I do not have direct access to this data.
+        </p>
+        <p>
+          I am using the following host:
+        </p>
+        <p>
+          GitHub Inc.<br />
+          88 Colin P Kelly Jr St<br />
+          San Francisco, CA 94107<br />
+          United States<br/>
+          <a class="text-light" href="https://github.com">https://github.com</a>
+        </p>
+        <p>
+          GitHub has implemented compliance measures for international data transfers.
+          These apply to all global activities where GitHub processes personal data of natural persons in the EU.
+          These measures are based on the EU Standard Contractual Clauses (SCCs).
+          Further information on this and on objection and removal options towards GitHub can be found at: <br/>
+          <a class="text-light" href="https://github.com/customer-terms/github-data-protection-agreement">
+            https://github.com/customer-terms/github-data-protection-agreement
+          </a><br/>
+          <a class="text-light" href="https://docs.github.com/de/site-policy/privacy-policies/github-general-privacy-statement">
+            https://docs.github.com/de/site-policy/privacy-policies/github-general-privacy-statement
+          </a>
+        </p>
+        <h6>Information on data transfer to the USA</h6>
+        <p>
+          I would like to point out that the USA is not a safe third country within the meaning of EU data protection law.
+          US companies are obliged to disclose personal data to security authorities,
+          without you as the data subject being able to take legal action against this.
+          It can therefore not be ruled out that US authorities (e.g. secret services) may process, evaluate and use your data located on US servers for surveillance purposes.
+          processed, evaluated and permanently stored for surveillance purposes.
+          I have no influence on these processing activities.
+        </p>
+
+        <h5>Contact form</h5>
+        <p>
+          If you submit inquiries to me via our contact form, the information provided in the contact form as well as any contact information provided therein will be stored by me in order to handle your inquiry and in the event that I have further questions. I will not share this information without your consent.
+        </p>
+        <p>
+          I use an external provider in order to provide you with the functionality of the contact form on this static website.
+          When you use the contact form, the data you submit will be processed by this provider and forwarded to me by email.
+        </p>
+          I am using the following provider:
+        </p>
+        <p>
+          Web3Forms<br />
+          <a class="text-light" href="https://web3forms.com">https://web3forms.com</a>
+        </p>
+        <p>
+          In addition, Web3Forms collects further data in order to provide the desired functionality of the form. This data includes, among other things:
+        </p>
+        <ul>
+          <li>your IP address</li>
+          <li>your browser type</li>
+          <li>the domain of the website</li>
+          <li>the date and time of access</li>
+        </ul>
+        <p>
+          This data is not linked to information that enables personal identification.
+          Further information on how user data is handled can be found in Web3Forms's data protection declaration at:<br/>
+          <a class="text-light" href="https://web3forms.com/privacy">https://web3forms.com/privacy</a>.
+        </p>
+        <p>
+          The processing of these data is based on Art. 6(1)(b) GDPR, if your request is related to the execution of a contract
+          or if it is necessary to carry out pre-contractual measures. In all other cases the processing is based on our legitimate interest
+          in the effective processing of the requests addressed to me (Art. 6(1)(f) GDPR) or on your agreement (Art. 6(1)(a) GDPR)
+          if this has been requested; the consent can be revoked at any time.
+        </p>
+        <p>
+          The information you have entered into the contact form shall remain with me until you ask me to eradicate the data, revoke your consent to the archiving of data or if the purpose for which the information is being archived no longer exists (e.g., after I have concluded our response to your inquiry). This shall be without prejudice to any mandatory legal provisions, in particular retention periods.
+        </p>
+        <p>
+          If you want to contact me without using this third-party provider, you can write me an email.
+        </p>
+        <h6>Information on data transfer to the USA</h6>
+        <p>
+          I would like to point out that the USA is not a safe third country within the meaning of EU data protection law.
+          US companies are obliged to disclose personal data to security authorities,
+          without you as the data subject being able to take legal action against this.
+          It can therefore not be ruled out that US authorities (e.g. secret services) may process, evaluate and use your data located on US servers for surveillance purposes.
+          processed, evaluated and permanently stored for surveillance purposes.
+          I have no influence on these processing activities.
+        </p>
+        
+        <h5>Request by email or telephone</h5>
+        <p>
+          If you contact me by email or telephone, your request, including all resulting personal data (name, request) will be stored and processed by me for the purpose of processing your request. I do not pass these data on without your consent.
+        </p>
+        <p>
+          The processing of these data is based on Art. 6(1)(b) GDPR, if your request is related to the execution of a contract
+          or if it is necessary to carry out pre-contractual measures. In all other cases the processing is based on our legitimate interest
+          in the effective processing of the requests addressed to me (Art. 6(1)(f) GDPR) or on your agreement (Art. 6(1)(a) GDPR)
+          if this has been requested; the consent can be revoked at any time.
+        </p>
+        <p>
+          The data sent by you to me via contact requests remain with me until you request me to delete, revoke your consent to the storage or the purpose for the data storage lapses (e.g. after completion of your request). Mandatory statutory provisions – in particular statutory retention periods – remain unaffected.
+        </p>
+
+        <h5>Online meeting request</h5>
+        <p>
+          If you send me a meeting request, your details from the request form, including the contact details you provide there (e.g. email address),
+          will be stored by me for the purpose of making the appointment and in the event of follow-up questions. I will not pass on this data without your consent.
+        </p>
+        <p>
+          I use an external provider to provide you with the functionality to make appointments.
+          When you click on the "Schedule a meeting" link, the external provider's website opens in a new window.
+          When you use the meeting request page, the data you provide will be processed by this provider and forwarded to me by email.
+        </p>
+          I am using the following provider:
+        </p>
+        <p>
+          Cal.com, Inc.,<br />
+          2261 Market Street #4382<br />
+          San Francisco, CA<br />
+          United States<br />
+          <a class="text-light" href="https://cal.com">https://cal.com</a>
+        </p>
+        <p>
+          In addition, Cal.com collects further data in order to provide the desired functionality of the form. This data includes, among other things:
+        </p>
+        <ul>
+          <li>your IP address</li>
+          <li>your browser type</li>
+          <li>the domain of the website</li>
+          <li>the date and time of access</li>
+        </ul>
+        <p>
+          You can find more information in Cal.com's privacy policy:<br/>
+          <a class="text-light" href="https://cal.com/privacy">https://cal.com/privacy</a>.
+        </p>
+        <p>
+          The processing of these data is based on Art. 6(1)(b) GDPR, if your request is related to the execution of a contract
+          or if it is necessary to carry out pre-contractual measures. In all other cases the processing is based on our legitimate interest
+          in the effective processing of the requests addressed to me (Art. 6(1)(f) GDPR) or on your agreement (Art. 6(1)(a) GDPR)
+          if this has been requested; the consent can be revoked at any time.
+        </p>
+        <p>
+          The data sent by you to me via the booking request form remain with me
+          until you request me to delete, revoke your consent to the storage or
+          the purpose for the data storage lapses (e.g. after the appointment has been held).
+          Mandatory statutory provisions &ndash; in particular statutory retention periods &ndash; remain unaffected.
+        </p>
+        <h6>Information on data transfer to the USA</h6>
+        <p>
+          I would like to point out that the USA is not a safe third country within the meaning of EU data protection law.
+          US companies are obliged to disclose personal data to security authorities,
+          without you as the data subject being able to take legal action against this.
+          It can therefore not be ruled out that US authorities (e.g. secret services) may process, evaluate and use your data located on US servers for surveillance purposes.
+          processed, evaluated and permanently stored for surveillance purposes.
+          I have no influence on these processing activities.
+        </p>
+        
+        <!-- Everything else -->
+        <h4>Other</h4>
+        <h5>Storage duration</h5>
+        <p>
+          Unless a more specific storage period has been specified in this privacy policy, your personal data will remain with me until the purpose for which it was collected no longer applies. If you assert a justified request for deletion or revoke your consent to data processing, your data will be deleted, unless I have other legally permissible reasons for storing your personal data (e.g., tax or commercial law retention periods); in the latter case, the deletion will take place after these reasons cease to apply.
+        </p>
+
+        <h5>General information on the legal basis for the data processing on this website</h5>
+        <p>
+          If you have consented to data processing, I process your personal data on the basis of Art. 6(1)(a) GDPR or Art. 9 (2)(a) GDPR, if special categories of data are processed according to Art. 9 (1) DSGVO. In the case of explicit consent to the transfer of personal data to third countries, the data processing is also based on Art. 49 (1)(a) GDPR. If you have consented to the storage of cookies or to the access to information in your end device (e.g., via device fingerprinting), the data processing is additionally based on § 25 (1) TTDSG. The consent can be revoked at any time. If your data is required for the fulfillment of a contract or for the implementation of pre-contractual measures, I process your data on the basis of Art. 6(1)(b) GDPR. Furthermore, if your data is required for the fulfillment of a legal obligation, I process it on the basis of Art. 6(1)(c) GDPR. Furthermore, the data processing may be carried out on the basis of our legitimate interest according to Art. 6(1)(f) GDPR. Information on the relevant legal basis in each individual case is provided in the following paragraphs of this privacy policy.
+        </p>
+        
+        <h5>Recipients of personal data</h5>
+        <p>
+          In the scope of our business activities, I cooperate with various external parties.
+          In some cases, this also requires the transfer of personal data to these external parties.
+          I only disclose personal data to external parties if this is required as part of the fulfillment of a contract,
+          if I am legally obligated to do so (e.g., disclosure of data to tax authorities),
+          if I have a legitimate interest in the disclosure pursuant to Art. 6 (1)(f) GDPR,
+          or if another legal basis permits the disclosure of this data. When using processors,
+          I only disclose personal data of our customers on the basis of a valid contract on data processing.
+          In the case of joint processing, a joint processing agreement is concluded.
+        </p>
+        
+        <h5>Revocation of your consent to the processing of data</h5>
+        <p>
+          A wide range of data processing transactions are possible only subject to your express consent. You can also revoke at any time any consent you have already given us. This shall be without prejudice to the lawfulness of any data collection that occurred prior to your revocation.  
+        </p>
+        
+        <h5>Right to object to the collection of data in special cases; right to object to direct advertising (Art. 21 GDPR)</h5>
+        <p>
+          IN THE EVENT THAT DATA ARE PROCESSED ON THE BASIS OF ART. 6(1)(E) OR (F) GDPR, YOU HAVE THE RIGHT TO AT ANY TIME OBJECT TO THE PROCESSING OF YOUR PERSONAL DATA BASED ON GROUNDS ARISING FROM YOUR UNIQUE SITUATION. THIS ALSO APPLIES TO ANY PROFILING BASED ON THESE PROVISIONS. TO DETERMINE THE LEGAL BASIS, ON WHICH ANY PROCESSING OF DATA IS BASED, PLEASE CONSULT THIS DATA PROTECTION DECLARATION. IF YOU LOG AN OBJECTION, I WILL NO LONGER PROCESS YOUR AFFECTED PERSONAL DATA, UNLESS I AM IN A POSITION TO PRESENT COMPELLING PROTECTION WORTHY GROUNDS FOR THE PROCESSING OF YOUR DATA, THAT OUTWEIGH YOUR INTERESTS, RIGHTS AND FREEDOMS OR IF THE PURPOSE OF THE PROCESSING IS THE CLAIMING, EXERCISING OR DEFENCE OF LEGAL ENTITLEMENTS (OBJECTION PURSUANT TO ART. 21(1) GDPR).
+        </p>
+        <p>
+          IF YOUR PERSONAL DATA IS BEING PROCESSED IN ORDER TO ENGAGE IN DIRECT ADVERTISING, YOU HAVE THE RIGHT TO OBJECT TO THE PROCESSING OF YOUR AFFECTED PERSONAL DATA FOR THE PURPOSES OF SUCH ADVERTISING AT ANY TIME. THIS ALSO APPLIES TO PROFILING TO THE EXTENT THAT IT IS AFFILIATED WITH SUCH DIRECT ADVERTISING. IF YOU OBJECT, YOUR PERSONAL DATA WILL SUBSEQUENTLY NO LONGER BE USED FOR DIRECT ADVERTISING PURPOSES (OBJECTION PURSUANT TO ART. 21(2) GDPR).
+        </p>
+        
+        <h5>Right to log a complaint with the competent supervisory agency</h5>
+        <p>
+          In the event of violations of the GDPR, data subjects are entitled to log a complaint with a supervisory agency, in particular in the member state where they usually maintain their domicile, place of work or at the place where the alleged violation occurred. The right to log a complaint is in effect regardless of any other administrative or court proceedings available as legal recourses.
+        </p>
+        
+        <h5>Right to data portability</h5>
+        <p>
+          You have the right to demand that I hand over any data I automatically process on the basis of your consent or in order to fulfil a contract be handed over to you or a third party in a commonly used, machine readable format. If you should demand the direct transfer of the data to another controller, this will be done only if it is technically feasible.
+        </p>
+        
+        <h5>Information about, rectification and eradication of data</h5>
+        <p>
+          Within the scope of the applicable statutory provisions, you have the right to at any time demand information about your archived personal data, their source and recipients as well as the purpose of the processing of your data. You may also have a right to have your data rectified or eradicated. If you have questions about this subject matter or any other questions about personal data, please do not hesitate to contact me at any time.
+        </p>
+        
+        <h5>Right to demand processing restrictions</h5>
+        <p>
+          You have the right to demand the imposition of restrictions as far as the processing of your personal data is concerned. To do so, you may contact me at any time. The right to demand restriction of processing applies in the following cases:
+        </p>
+
+        <ul>
+          <li>
+            In the event that you should dispute the correctness of your data archived by us, I will usually need some time to verify this claim. During the time that this investigation is ongoing, you have the right to demand that I restrict the processing of your personal data.
+          </li>
+          <li>
+            If the processing of your personal data was/is conducted in an unlawful manner, you have the option to demand the restriction of the processing of your data in lieu of demanding the eradication of this data.
+          </li>
+          <li>
+            If I do not need your personal data any longer and you need it to exercise, defend or claim legal entitlements, you have the right to demand the restriction of the processing of your personal data instead of its eradication.
+          </li>
+          <li>
+            If you have raised an objection pursuant to Art. 21(1) GDPR, your rights and our rights will have to be weighed against each other. As long as it has not been determined whose interests prevail, you have the right to demand a restriction of the processing of your personal data.
+          </li>
+        </ul>
+
+        <p>
+          If you have restricted the processing of your personal data, these data – with the exception of their archiving – may be processed only subject to your consent or to claim, exercise or defend legal entitlements or to protect the rights of other natural persons or legal entities or for important public interest reasons cited by the European Union or a member state of the EU.
+        </p>
+        
+        <h5>SSL and/or TLS encryption</h5>
+        <p>
+          For security reasons and to protect the transmission of confidential content, such as purchase orders or inquiries you submit to me as the website operator, this website uses either an SSL or a TLS encryption program. You can recognize an encrypted connection by checking whether the address line of the browser switches from &bdquo;http://&ldquo; to &bdquo;https://&ldquo; and also by the appearance of the lock icon in the browser line.
+        </p>
+        <p>
+          If the SSL or TLS encryption is activated, data you transmit to me cannot be read by third parties.
+        </p>
+
+        <h5>Timeliness and Amendments to this Data Protection Information</h5>
+        <p>
+          This data protection information as amended in August 2024 is currently applicable.
+        </p>
+        <p>
+          It may become necessary to change this data protection information due to the further development of our website and its offers or on account of amended legal or official requirements.
+          You may always access the latest data protection information on the website at (<a class="text-light" href="{{ .Permalink }}">{{ .Permalink }}</a>).
+        </p>
+        <p class="small">
+          Based on following sources: <a href="https://www.e-recht24.de">https://www.e-recht24.de</a>, <a href="https://www.opr.vc">https://www.opr.vc</a>
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+{{ end }}
