@@ -111,5 +111,7 @@
 {{ end }}
 {{ $script := resources.Get "js/script.js" | minify }}
 <script src="{{ $script.Permalink }}"></script>
+{{ $slickOverride := resources.Get "js/slick.override.js" | minify }}
+<script src="{{ $slickOverride.Permalink }}"></script>
 {{ $appender := resources.Get "js/appender.js" | minify }}
 <script src="{{ $appender.Permalink }}"></script>
